@@ -17,4 +17,10 @@ create database programer(
 	placa decimal(18,2)
 );
 
-create d
+create database sudjeluje(
+	projekt int,
+	programer varchar(50),
+	datumpocetka datetime,
+	datum kraja datetime
+
+);
