@@ -1,8 +1,8 @@
-drop database if exists firmapp23;)
+drop database if exists firma3pp23;)
 
-create database firmapp23;
+create database firma3pp23;
 
-use firmapp23;
+use firma3pp23;
 
 create database projekt(
 	sifra int not null primary key auto_increment,
@@ -24,4 +24,3 @@ create database sudjeluje(
 	datumpocetka datetime,
 	datum kraja datetime
 );
-s
