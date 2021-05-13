@@ -1,26 +1,29 @@
-drop database if exists firma3pp23;)
+drop database if exists firma3pp23;
 
 create database firma3pp23;
 
 use firma3pp23;
 
-create database projekt(
+create table projekt(
 	sifra int not null primary key auto_increment,
 	naziv varchar(50) not null,
-	cijena decimal(18,2)
+	cijena decimal
 );
 
-create database programer(
+create table programer(
 	sifra int not null primary key auto_increment,
 	ime varchar(50) not null,
 	prezime varchar(50) not null,
-	datumrodjenja datetime
-	placa decimal(18,2)
+	datumrodjenja datetime,
+	placa decimal
 );
 
-create database sudjeluje(
-	projekt int,
-	programer varchar(50),
+create table sudjeluje(
+	projekt int not null,
+	programer int,
 	datumpocetka datetime,
-	datum kraja datetime
+	datumkraja datetime
 );
+
+alter table sudjeluje add foreign key (projekt) references projekt(sifra);
+alter table sudjeluje add foreign key (programer) references programer(sifra);
