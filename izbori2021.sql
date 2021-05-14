@@ -17,7 +17,8 @@ create table zupan(
 create table opcina(
 	sifra int not null primary key auto_increment,
 	zupanija int,
-	naziv varchar(50)
+	naziv varchar(50),
+	naziv2 varchar(50)
 );
 
 create table mjesto(
