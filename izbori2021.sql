@@ -17,8 +17,7 @@ create table zupan(
 create table opcina(
 	sifra int not null primary key auto_increment,
 	zupanija int,
-	naziv varchar(50),
-	naziv2 varchar(50)
+	naziv varchar(50)
 );
 
 create table mjesto(
@@ -31,45 +30,39 @@ alter table zupanija add foreign key (zupan) references zupan(sifra);
 alter table opcina add foreign key (zupanija) references zupanija(sifra);
 alter table mjesto add foreign key (opcina) references opcina(sifra);
 
-insert into zupanija (naziv) values
-('Istarska'),
-('Karlovaèka'),
-('Zagrebaèka');
+insert into opcina (sifra) values
+(1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12);
 
-insert into opcina (naziv) values
-('Èaglin'),
-('Èavle'),
-('Èaèinci'),
-('Èeminac'),
-('Èaðavica'),
-('Èepin');
-
-insert into mjesto (naziv) values
-('Osijek'),
-('Sabljiæi'),
-('Sali'),
-('Salnik'),
-('Salajci'),
-('Samobor'),
-('Samoborec'),
-('Samarica'),
-('Samatovci'),
-('Salež'),
-('Salajci'),
-('Saborsko');
+insert into mjesto (opcina,naziv) values
+(1,'Osijek'),
+(2,'Sabljiæi'),
+(3,'Sali'),
+(4,'Salnik'),
+(5,'Salajci'),
+(6,'Samobor'),
+(7,'Samoborec'),
+(8,'Samarica'),
+(9,'Samatovci'),
+(10,'Salež'),
+(11,'Salajci'),
+(12,'Saborsko');
 
 insert into zupan (ime,prezime) values
 ('Davor','Gobac'),
 ('Siniša','Vuco'),
 ('Jasna','Zlokiæ');
 
+
 update mjesto set naziv='Sisak'
+where sifra=1
 ;
 update mjesto set naziv='Zadar'
+where sifra=2
 ;
-update mjesto set naziv='Split';
-
-delete from opcina where naziv>'Èepin'
+update mjesto set naziv='Split'
+where sifra=3
 ;
-delete from opcina where naziv>'Èaðavica'
+delete from opcina where sifra=4
+;
+delete from opcina where sifra=5
 ;
