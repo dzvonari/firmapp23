@@ -62,7 +62,7 @@ where sifra=2
 update mjesto set naziv='Split'
 where sifra=3
 ;
-delete from mjesto where sifra>10
+delete from mjesto where sifra=10
 ;
-delete from opcina where sifra>10
+delete from opcina where sifra=10
 ;
