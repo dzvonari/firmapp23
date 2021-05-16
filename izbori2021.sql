@@ -33,6 +33,22 @@ alter table mjesto add foreign key (opcina) references opcina(sifra);
 insert into opcina (sifra) values
 (1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12);
 
+insert into opcina (naziv) values
+('osjeckobaranjska'),
+('vukovarskosrijemska'),
+('pozeskoslavonska'),
+('zadarska'),
+('zagrebacka'),
+('sibenskokninska')
+;
+
+insert into zupanija (naziv) values
+('bilogorska'),
+('hvarska'),
+('virska')
+;
+
+
 insert into mjesto (opcina,naziv) values
 (1,'Osijek'),
 (2,'Sabljiæi'),
